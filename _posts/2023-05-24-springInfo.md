@@ -65,6 +65,7 @@ IoC가 개발자의 코드를 호출해 필요한 객체를 생성, 소멸 하�
 
 * 대표적으로 라이브러리나 API, 프레임워크를 연동 할 때 연결하는 소스코드를 직접 작성하는게 아닌
 외부 파일을 연결해 불러오는 방식이다.
+
 # 3. AOP(Aspect Object Programming, 관점 지향 프로그래밍)
 
 * 로깅, 트랜잭션, 보안 등 여러 모듈에서 공통적으로 사용하는 기능을 분리하여 관리 할 수 있다.
@@ -81,5 +82,6 @@ IoC가 개발자의 코드를 호출해 필요한 객체를 생성, 소멸 하�
 
 * 즉, getter/setter를 가진 단순한 자바 오브젝트를 말한다.
 
-출처: https://dundung.tistory.com/279 [DunDung]
-출처: https://jerryjerryjerry.tistory.com/62
+출처: [gdh]: https://dundung.tistory.com/279 [DunDung]
+
+출처: [gdh]: https://jerryjerryjerry.tistory.com/62
