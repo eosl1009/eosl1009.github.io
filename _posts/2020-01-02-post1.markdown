@@ -1,8 +1,8 @@
 ---
 layout: post
-title: post-sample
-date: 2020-01-02 19:20:23 +0900
-category: sample
+title: 스프링이란?
+date: 2023-05-24
+category: Spring
 ---
 # post-sample
 > Hello!
