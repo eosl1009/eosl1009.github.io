@@ -696,6 +696,7 @@ dependency를 추가해주기만 하면 된다.
 ※  개발 도중 소스코드 변경사항이 적용이 안될 때 ,  또는 pom.xml을 변경했는데도 lib가 추가가 안될 때
 	
 1.프로젝트 클린
+	
 ![image](https://github.com/eosl1009/eosl1009.github.io/assets/49154210/75052edc-d048-4188-b5ad-b3ffe830832c)
 
 해당 프로젝트 컴파일을 다시한다.   
