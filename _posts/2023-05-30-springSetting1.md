@@ -1,7 +1,7 @@
 ---
 layout: post
-title: 스프링이란?
-date: 2023-05-24
+title: Spring 세팅
+date: 2023-05-30
 category: Spring
 ---
 
