@@ -105,7 +105,7 @@ mvc-servlet.xml을  설정파일로 해서 SpringContainer를 만든다.
 
 ![image](https://github.com/eosl1009/eosl1009.github.io/assets/49154210/b00eabb0-3ddc-44eb-992c-bf871e8eb5ba)
 
-mvc-servlet.xml  (우선 namespace에서 관련 내용을 체크해줘야합니다. 근데 spring프로젝트만들면 기본으로 돼어있음)
+mvc-servlet.xml  (우선 namespace에서 관련 내용을 체크해줘야합니다. 근데 spring프로젝트만들면 기본으로 되어있음)
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -785,7 +785,7 @@ RequestMappingHandlerMapping, RequestMappingHandlerAdapter 대신 다른 구현�
 
 해준다. 
 
-참고로 기본 설정 값은 Spring jar파일을 따운받을 때 DispatcherServlet.properties파일안에 명시돼어있다.
+참고로 기본 설정 값은 Spring jar파일을 따운받을 때 DispatcherServlet.properties파일안에 명시되어있다.
 
 ![image](https://github.com/eosl1009/eosl1009.github.io/assets/49154210/3dcef046-4c8f-45b9-8a2d-ceadd6df8566)
 
