@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Spring MV# 적용3
+title: Spring MVC 적용3
 date: 2023-05-31
 category: Spring
 ---
