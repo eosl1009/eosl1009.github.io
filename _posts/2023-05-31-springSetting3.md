@@ -441,7 +441,7 @@ AbstractHandlerMapping.getHandler()
     
 		return executionChain;
 	}
-  
+```
   결국 @ReuqestMapping("/free/freeList.wow)가 있으므로   doDispatch메소드의 
 
 mappedHandler는 우리가 @Controller를 붙인 freeController 빈 객체가 된다.
