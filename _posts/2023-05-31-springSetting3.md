@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Spring 세팅3
-date: 2023-05-30
+title: Spring MV# 적용3
+date: 2023-05-31
 category: Spring
 ---
 
