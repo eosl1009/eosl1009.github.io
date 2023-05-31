@@ -148,8 +148,8 @@ use-default-filters="true" 를 보자. 이는 위에서 말한 @들을 스캔하
 
  
 
-# \<util: properties\>
-<util:properties id="util"  location="/WEB-INF/classes/spring/appconfig.properties"/>
+# \<util\: properties\>
+\<util:properties id="util"  location="/WEB-INF/classes/spring/appconfig.properties"/\>
 
 이 태그는 properties파일을 읽어서 그 정보를 가지고있는 빈을 등록해주는 태그이다.
 
@@ -178,7 +178,7 @@ jdbc.validationQuery=SELECT 1 FROM dual
 
  
 
-DataSource와 Mybatis 관련빈, 그리고 <mybatis-spring:scan>
+DataSource와 Mybatis 관련빈, 그리고 \<mybatis-spring:scan\>
 
 ```xml
 <bean id="dataSource"
@@ -219,23 +219,23 @@ DataSource는 DB에 실제로 연결하는 빈이다. 그렇기 때문에 Driver
 
  
 
-마지막으로 <mybatis-spring:scan>은  com.study 및 그 하위 패키지를 스캔하면서
+마지막으로 \<mybatis-spring:scan\>은  com.study 및 그 하위 패키지를 스캔하면서
 
-@Mapper가 붙은 인터페이스의  객체를 빈 등록한다.
+\@Mapper가 붙은 인터페이스의  객체를 빈 등록한다.
 
  
 
 # 결과
-ApplicationContext는 @Repostiory, @Component,@Service, / @Mapper가 붙은 빈을 가지고 있게 된다.
+ApplicationContext는 \@Repostiory, \@Component, \@Service, \@Mapper가 붙은 빈을 가지고 있게 된다.
 
-(사실 study4_1에서 @Repostirory,@Component는 사용x,    실제론 @Service, @Mapper만 빈을 가지고 있는다)
+(사실 study4_1에서 \@Repostirory,\@Component는 사용x,    실제론 \@Service, \@Mapper만 빈을 가지고 있는다)
 ![image](https://github.com/eosl1009/eosl1009.github.io/assets/49154210/e793435f-3baf-4c14-b175-2fc04dff8343)
 
-※ 참고. context-*.xml 파일 나누기
+※ 참고. context-\*.xml 파일 나누기
 
 이렇게 @Controller을 제외한 대부분의 빈은 ApplicationContext에 등록한다.
 
-이 때문에 지금까지는 context-main.xml에  <bean>태그나 scan을 써서 빈을 등록하도록 했다.
+이 때문에 지금까지는 context-main.xml에  \<bean\>태그나 scan을 써서 빈을 등록하도록 했다.
 
 하지만 여러가지 기능을 추가하면서 여러 빈들을 추가해야하는 상황이 오면 context-main.xml이 길어지게 될 것이다. 
 
