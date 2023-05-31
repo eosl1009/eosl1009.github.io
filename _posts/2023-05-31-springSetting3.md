@@ -152,7 +152,7 @@ mvc-servlet.xml  (우선 namespace에서 관련 내용을 체크해줘야합니�
 	  
 	
 </beans:beans>
-
+```
 
 `WebApplicationContext(DispatcherServlet)설정파일은 mvc-servlet.xml이다. Controller단 관련 빈들을 등록해준다.`
 
