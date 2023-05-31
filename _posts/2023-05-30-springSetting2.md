@@ -129,7 +129,7 @@ context-*.xml의 namespace
 
 클래스들은 빈 등록을 하겠다는 의미이다. 이는 DI에서 설명한 내용이다.
 
-\<context:component-scan>\이 스캔 후 모든 @을 등록하는 건 아니다.   
+\<context:component-scan\>이 스캔 후 모든 @을 등록하는 건 아니다.   
 
 이 태그가 등록하는 @은  @Repostioy,@Component,@Service,@Controller 등이 있다. 
 
@@ -221,14 +221,14 @@ DataSource는 DB에 실제로 연결하는 빈이다. 그렇기 때문에 Driver
 
 마지막으로 \<mybatis-spring:scan\>은  com.study 및 그 하위 패키지를 스캔하면서
 
-\@Mapper가 붙은 인터페이스의  객체를 빈 등록한다.
+@Mapper가 붙은 인터페이스의  객체를 빈 등록한다.
 
  
 
 # 결과
-ApplicationContext는 \@Repostiory, \@Component, \@Service, \@Mapper가 붙은 빈을 가지고 있게 된다.
+ApplicationContext는 @Repostiory, @Component, @Service, @Mapper가 붙은 빈을 가지고 있게 된다.
 
-(사실 study4_1에서 \@Repostirory,\@Component는 사용x,    실제론 \@Service, \@Mapper만 빈을 가지고 있는다)
+(사실 study4_1에서 @Repostirory,@Component는 사용x,    실제론 @Service, @Mapper만 빈을 가지고 있는다)
 ![image](https://github.com/eosl1009/eosl1009.github.io/assets/49154210/e793435f-3baf-4c14-b175-2fc04dff8343)
 
 ※ 참고. context-\*.xml 파일 나누기
