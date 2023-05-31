@@ -110,9 +110,9 @@ context-*.xml의 namespace
 
 나중을 위해서 모두 체크해줘도 상관없다.
 
-# context:component-scan
+# \<context:component-scan\>
 
-먼저 "<context:component-scan>" 태그를 보자. 
+먼저 \<context:component-scan\> 태그를 보자. 
 
 ```xml
 	<!-- ContextLoaderListenr, 프로젝트 전체에서 공유되는 빈들 관리 Buisness, Persistence layer의 
