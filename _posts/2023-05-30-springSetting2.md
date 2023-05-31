@@ -7,6 +7,8 @@ category: Spring
 
 
 일단 context-*.xml을 살펴보기 전에 완성된 (또는 앞으로 완성할 )프로젝트 4_1의 파일 구성을 살펴보자. 
+
+
 ![image](https://github.com/eosl1009/eosl1009.github.io/assets/49154210/34bc05fe-c6c1-4366-be2e-3a5062b9e458)
 
 
