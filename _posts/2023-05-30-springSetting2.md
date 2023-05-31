@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Spring 세팅2
+title: Spring MVC 적용2
 date: 2023-05-30
 category: Spring
 ---
