@@ -129,7 +129,7 @@ context-*.xml의 namespace
 
 클래스들은 빈 등록을 하겠다는 의미이다. 이는 DI에서 설명한 내용이다.
 
-<context:component-scan>이 스캔 후 모든 @을 등록하는 건 아니다.   
+\<context:component-scan>\이 스캔 후 모든 @을 등록하는 건 아니다.   
 
 이 태그가 등록하는 @은  @Repostioy,@Component,@Service,@Controller 등이 있다. 
 
