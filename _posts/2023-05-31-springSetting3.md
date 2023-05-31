@@ -223,7 +223,7 @@ url 요청  : \<script src="\<%=request.getContextPath() %\>/url/bootstrap-3.3.2
 
 url 요청  : \<script src="\<%=request.getContextPath() %\>/resources/bootstrap-3.3.2/js/bootstrap.js"\>\</script\>이고
 
-__\<bean  class= InternalResourceViewResolver\>
+**\<bean  class= InternalResourceViewResolver\>
 
 Spring 동작원리 7번부분에서 동작하는 빈이다.  preFix, Suffix를 보면 다음과 같이 되어있다.
 
@@ -239,7 +239,7 @@ DispatcherServlet은 "/WEB-INF/views/free/freeList.jsp" 의 view 값을 얻는�
 
  
 
-__ \<context:component:scan\>
+** \<context:component:scan\>
 
 이전글에서 설명했다. 단지 이전글에서는 ContextLoaderListenr가 @Controller를 제외한 @을 빈으로 등록하도록 했고
 
@@ -370,7 +370,7 @@ protected void doDispatch(HttpServletRequest request, HttpServletResponse respon
 
  
 
-__1.mappedHandler=getHandler()의 getHandler  // 현재 요청에 알맞은 핸들러를 가져온다.
+**1.mappedHandler=getHandler()의 getHandler  // 현재 요청에 알맞은 핸들러를 가져온다.
 
 우리는 @Controller를 붙인 클래스를 사용하지만, DispatcherServlet(Spring) 입장에서는 이 요청을 처리하는게 
 
@@ -452,7 +452,7 @@ mappedHandler는 우리가 @Controller를 붙인 freeController 빈 객체가 �
 
  
 
-__2. HandlerAdapter ha = getHandlerAdapter(mappedHandler.getHandler());
+** 2. HandlerAdapter ha = getHandlerAdapter(mappedHandler.getHandler());
 
 mappedHandler.getHandler()를 먼저 보자. mappedHandler는 HandlerExecutionChain 타입이다.
 
@@ -490,7 +490,7 @@ RequestMappingHandlerAdapter 일 때  if(ha.supports(handler)){return ha; } 가 
 
  
 
-__3. mv = ha.handle(processedRequest, response, mappedHandler.getHandler());
+** 3. mv = ha.handle(processedRequest, response, mappedHandler.getHandler());
 
 실제 컨트롤러(핸들러) 메소드가 실행된다 라고 했는데, 이 실제 컨트롤러 메소드가 바로
 
@@ -592,7 +592,7 @@ MVC동작원리 6번과정이 끝이다.
 
  
 
-__4.processDispatchResult(processedRequest, response, mappedHandler, mv, dispatchException);
+** 4.processDispatchResult(processedRequest, response, mappedHandler, mv, dispatchException);
 
 viewResolver를 이용해 view를 선택하고, forwarding한다
 
