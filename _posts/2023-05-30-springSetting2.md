@@ -148,7 +148,7 @@ use-default-filters="true" 를 보자. 이는 위에서 말한 @들을 스캔하
 
  
 
-# <util: properties>
+# \<util: properties\>
 <util:properties id="util"  location="/WEB-INF/classes/spring/appconfig.properties"/>
 
 이 태그는 properties파일을 읽어서 그 정보를 가지고있는 빈을 등록해주는 태그이다.
