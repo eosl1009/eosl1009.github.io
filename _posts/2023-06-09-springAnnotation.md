@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Spring MVC 적용4
-date: 2023-05-31
+title: Spring 어노테이션
+date: 2023-06-09
 category: Spring
 ---
 
