@@ -815,15 +815,17 @@ target폴더(및 그 안의 하위 파일들)가 있으면 war파일만 재생�
 ```
 	
 web.xml의 태그를 보면  크게 3군데로 나눌 수 있다.
-
+	
+```xml
 <filter>,<filter-mapping>
 <context-param>, <listener>
 <servlet> , <servlet-mapping>
+```
  
 
 1. filter, filter-mapping
 
-<filter>태그와 그 하위태그를 살펴보면 encoding에 관한 내용이라는 걸 알 수있다. 
+\<filter\>태그와 그 하위태그를 살펴보면 encoding에 관한 내용이라는 걸 알 수있다. 
 
  filter-mapping의 url-pattern이   '/*' 이다. 모든 요청에 대해서 해당 필터가 적용된다.
 
@@ -837,7 +839,7 @@ web.xml의 태그를 보면  크게 3군데로 나눌 수 있다.
 
  
 
-2. <context-param>, <listener>
+2. \<context-param\>, \<listener\>
 
 기본적으로 web.xml에서  <context-param>이 먼저 있지만,   <listener> 태그를 먼저 알아야 한다.
 
@@ -876,15 +878,15 @@ ServletContextListener은 서버가 켜지고 꺼질 때의 이벤트를 제공�
 
  
 
-3.<servlet>, <servlet-mapping>
+3.\<servlet\>, \<servlet-mapping\>
 
-<servlet-class>에 보면 DispatcherServlet이 있다. 이는 스프링에서 제공해주는 Servlet이다 .
+\<servlet-class\>에 보면 DispatcherServlet이 있다. 이는 스프링에서 제공해주는 Servlet이다 .
 
 DispatcherServlet이 하는 역할은 너무 많기 때문에 여기서 다 설명하기 어렵우니 빈 관련해서만 일단 설명한다.
 
 DispatcherServlet은  WebApplicationContext를 만든다. 
 
-<init-param>태그를 보자.
+\<init-param\>태그를 보자.
 	
 ```xml
 	<init-param>
@@ -893,7 +895,7 @@ DispatcherServlet은  WebApplicationContext를 만든다.
 </init-param>
 ```
 	
-<param-value> 태그에 보면 mvc-servlet.xml이 있다.   
+\<param-value\> 태그에 보면 mvc-servlet.xml이 있다.   
 
 WebApplicationContext은 이 mvc-servlet.xml을 읽어서 빈을 등록한다.
 
@@ -917,9 +919,9 @@ WebApplicaionContext에 등록된 빈에 접근이 불가능하고, 그 반대�
 	
 ※ 여기서 DispatcherServlet이 2개인건 단순히 빈의 참조 가능 관계를 표현하기 위해서이다. 
 
-저렇게 DispatcherServlet이 2개일려면 web.xml에서 <servlet> 태그에 DispatcherServlet을 등록해주고 
+저렇게 DispatcherServlet이 2개일려면 web.xml에서 \<servlet\> 태그에 DispatcherServlet을 등록해주고 
 
-<url-pattern>을 나누면 된다.   하지만 실제로 DispatcherServlet은 FrontController 역할을 하기 때문에
+\<url-pattern\>을 나누면 된다.   하지만 실제로 DispatcherServlet은 FrontController 역할을 하기 때문에
 
 대부분의 경우 DispatcherServlet은 1개만 둔다.
 
