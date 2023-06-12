@@ -100,6 +100,6 @@ category: DB
 
 
 
-==============
+---------------------------------------
 
 춣처 : <https://www.fun-coding.org/mysql_basic1.html#gsc.tab=0>
