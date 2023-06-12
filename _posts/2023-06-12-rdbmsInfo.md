@@ -98,3 +98,8 @@ category: DB
 * ROLLBACK 트랜잭션(Transaction)의 실행 취소.
 
 
+
+
+==============
+
+춣처 : <https://www.fun-coding.org/mysql_basic1.html#gsc.tab=0>
