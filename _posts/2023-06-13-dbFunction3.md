@@ -241,3 +241,7 @@ NVL2 함수는 null인경우와 null이 아닌 경우를 모두 관리해준다.
 ```
 
 ![image](https://github.com/eosl1009/eosl1009.github.io/assets/49154210/50391315-f2eb-4cab-86d9-21fa6afac7e8)
+
+
+-------------------------------------
+출처 : <https://sehyeok.tistory.com/90>
