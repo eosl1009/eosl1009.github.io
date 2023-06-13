@@ -31,5 +31,6 @@ category: DB
 
 
 **※ 함수 사용방법 : SELECT 문자함수 FROM DUAL;
+
   EX) SELECT LOWER('SQL Expert') FROM DUAL**
 
