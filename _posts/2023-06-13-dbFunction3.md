@@ -141,3 +141,103 @@ select to_char(sysdate, 'YYYY/MM/DD HH24:MI:SS AM') as today from dual;
 
 
 ### 숫자 데이터 -> 문자
+
+|형식|설명|
+|---|---|
+|9| 숫자의 한 자리를 의미 (빈자리를 채우지 않음)|
+|0|	빈 자리를 0으로 채움|
+|$|	달러 표시를 붙여서 출력|
+|L|	L(LOCALE) 지역 화폐 단위 기호를 붙여서 출력|
+|.|	소수점 표시|
+|,|	천 단위의 구분기호 표시|
+
+```sql
+select sysdate, to_char(sal, '$999,999') as "$",
+    to_char(sal, 'L999,999') as L,
+    to_char(sal, '999,999.00') as 소수점,
+    to_char(sal, '000,999,999.00') as 빈자리_천단위,
+    to_char(sal, '000999999.99') as 빈자리,
+    to_char(sal, '999,999,000') as 천단위
+    from emp;
+```
+
+![image](https://github.com/eosl1009/eosl1009.github.io/assets/49154210/12e6cdb7-a596-4fca-89f1-e19bd4ab54ce)
+
+
+
+# 2.TO_NUMBER 함수
+
+**- 문자 데이터를 숫자 데이터로 변환하는 함수**
+
+**- TO_NUMBER ( [문자열 데이터] , [인식될 숫자 형태] )**
+
+문자 데이터를 숫자 데이터로 형 변환 하여 연산해보자
+```sql
+select to_number('21,000','999,999') - to_number('15,400','999,999') from dual;
+```
+
+![image](https://github.com/eosl1009/eosl1009.github.io/assets/49154210/6130045b-8abd-4dbf-9c66-0ebeef26ba1d)
+
+
+
+# 3. TO_DATE 함수
+ **- 문자 데이터를 날짜 데이터로 변환하는 함수**
+
+ **- TO_DATE( [문자열데이터] , [인식될 날짜형태] )**
+
+ ```sql
+ select to_date('2018-07-14', 'YYYY-MM-DD') as date1,
+    to_date('20180714','YYYY-MM-DD') as date2 from dual;
+ ```
+ 
+ ![image](https://github.com/eosl1009/eosl1009.github.io/assets/49154210/29c58ffc-6a23-40e4-8051-3d1dcfbd451d)
+
+
+이 함수를 이용하여 특정 날짜 이후에 입사한 사람의 정보를 확인해보자
+
+```sql
+select * from emp where hiredate > to_date('810601','RR/MM/DD');
+select * from emp where hiredate > to_date('19810601','YY/MM/DD');
+```
+![image](https://github.com/eosl1009/eosl1009.github.io/assets/49154210/0d6ecd1f-b592-415b-b990-4a166d979b60)
+
+
+두 SQL문 모두 같은 결과가 나온다
+```sql
+select * from emp where hiredate > '810601';
+```
+위처럼 입력해도 같은 결과를 얻을 수 있는데, 이를 통해 암시적 형변환이 일어났음을 알 수 있다.
+
+
+
+# 4. NVL 함수
+ **- NULL 여부를 검사하는 함수**
+
+ **- NVL( [검사할 데이터 또는 열] , [앞의 데이터가 NULL일 경우 반환할 데이터] )**
+ 
+ 사원들의 총 임금을 구하는 SQL문을 작성해보자. ( 총 임금 = 급여 + 보너스 )
+
+```sql
+select empno, ename, sal, comm, sal + comm, nvl(comm, 0), sal + nvl(comm, 0) from emp;
+```
+
+null끼리의 연산은 결과가 null이 나오므로 위의 경우 보너스가 없는 사원의 경우 sal+comm (급여+보너스) 도 null이 되어 나온다. 이를 해결하기 위해 null인 경우 0으로 대체해주고 이것을 sal(급여)에 더해주면 정상적인 총 임금을 구할 수 있다,
+
+![image](https://github.com/eosl1009/eosl1009.github.io/assets/49154210/2269d756-a4ae-48aa-b99c-c4e4128f7d6c)
+
+
+ **- NVL2( [검사할 데이터 또는 열] , [앞의 데이터가 NULL이 아닐 경우 반환할 데이터] ,**
+
+   **[앞의 데이터가 NULL일 경우 반환할 데이터] )**
+   
+   
+   
+NVL2 함수는 null인경우와 null이 아닌 경우를 모두 관리해준다.
+
+이를 통해 보너스가 있으면 O 아니면 X를 출력해보자
+ 
+ ```sql
+ select ename, sal, comm, nvl2(comm, 'O', 'X') from emp;
+```
+
+![image](https://github.com/eosl1009/eosl1009.github.io/assets/49154210/50391315-f2eb-4cab-86d9-21fa6afac7e8)
