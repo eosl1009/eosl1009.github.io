@@ -21,3 +21,15 @@ category: DB
 |CONCAT(‘문자1’,‘문자2’)|두 문자(열)을 연결하여 반환하는 함수|
 |CHR(아스키 코드값)|아스키 코드값을 문자로 반환하는 함수|
 |ASCII(‘문자’)|문자를 아스키코드 값으로 반환하는 함수|
+|CHR(65)/ CHAR(65)|'A'|
+|CONCAT(‘RDBMS’, ‘ SQL’)|‘RDBMS SQL’|
+|SUBSTR(‘SQL Expert’, 5, 3)|‘Exp’|
+|LENGTH(‘SQL Expert’)|10|
+|LTRIM(‘xxxYYZZxYZ’,‘x’) <br> RTRIM(‘XXYYzzXYzz’,‘z’) <br> TRIM(‘x’ FROM ‘xxYYZZxYZxx’)|‘YYZZxYZ’ <br> ‘XXYYzzXY’ <br> ‘YYZZxYZ’|
+|RTRIM(‘XXYYZZXYZ ’)|‘XXYYZZXYZ’
+
+
+
+**※ 함수 사용방법 : SELECT 문자함수 FROM DUAL;
+  EX) SELECT LOWER('SQL Expert') FROM DUAL**
+
